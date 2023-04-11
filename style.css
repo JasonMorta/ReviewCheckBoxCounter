@@ -1,0 +1,16 @@
+.floating-counter {
+  position: absolute;
+  z-index: 999;
+  left: 0;
+  top: 78px;
+  background-color: #71d5af;
+  font-size: 30px;
+  color: white;
+  padding: 0px 3px;
+  border-radius: 3px;
+}
+
+/* Adds hover effect to reviewer dashboard table */
+.tr-hover:hover {
+  background-color: rgb(113 213 175 / 45%) !important;
+}

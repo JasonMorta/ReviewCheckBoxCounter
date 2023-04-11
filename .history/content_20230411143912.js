@@ -1,0 +1,45 @@
+console.log(`%c Extension loaded`, 'color: #2196f3')
+  let floatingCounter = document.createElement("p");
+  floatingCounter.className = "floating-counter";
+
+  nav.append(floatingCounter);
+let nav = document.querySelector("nav");
+let counter = 0;
+
+
+let bulkBtn = document.querySelector("#bulk-action");
+bulkBtn.addEventListener("click", () => {
+  //alert("Bulk action button clicked");
+  createCounter();
+});
+
+// Function to create the UI elements
+function createCounter() {
+  // Create the floating element
+
+  floatingCounter.textContent = "Checked: " + counter;
+ //console.log("counter", counter);
+
+  if (counter === 0) {
+    findCheckboxes();
+  }
+}
+
+//Find all checkboxes
+function findCheckboxes() {
+  console.log(`%c found all checkboxes`, "color: green");
+  const checkboxes = document.querySelectorAll('input[type="checkbox"]');
+  checkboxes.forEach((checkbox) => {
+    checkbox.addEventListener("click", () => {
+      if (checkbox.checked) {
+        //console.log('checked', checkbox.checked)
+        counter++;
+        //localStorage.setItem('reviewCounter', counter)
+      } else{
+        counter--;
+        //console.log('unchecked', checkbox.checked)
+      }
+      createCounter()
+    });
+  });
+}

@@ -1,0 +1,10 @@
+.floating-counter {
+  position: absolute;
+  z-index: 999;
+  left: 0;
+  top: 78px;
+  background-color: #71d5af;
+  font-size: 30px;
+  color: white;
+  padding: 0px 3px;
+}

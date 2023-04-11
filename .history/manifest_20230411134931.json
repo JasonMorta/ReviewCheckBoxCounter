@@ -1,0 +1,15 @@
+{
+    "manifest_version": 3,
+    "name": "Review Checkbox counter",
+    "version": "1.0",
+    "description": "Keeps track of the number of checkboxes checked",
+    "permissions": ["activeTab", "tabs"],
+    "content_scripts": [{
+      "matches": ["https://hyperiondev.cogrammar.com/dashboard/admin/reviews/outstanding/"],
+      "css": ["style.css"],
+      "js": ["content.js"]
+    }],
+    "action": {
+        "default_popup": "popup.html"
+      }
+  }
