@@ -55,6 +55,12 @@ function checkAll() {
   const checkboxes = document.querySelectorAll('input[type="checkbox"]');
   counter = 0;// clear counter first
   checkboxes.forEach((checkbox) => {
-    checkbox.checked && counter++;
+ 
+    if (checkbox.checked) {
+      counter++
+    } else {
+      checkbox.checked = false;
+      counter--
+    }
   })
  }
