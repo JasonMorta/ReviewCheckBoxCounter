@@ -1,9 +1,9 @@
 {
     "manifest_version": 3,
     "version": "1.0",
-    "name": "Review Checkbox counter",
+    "name": "Review Checkbox counter. Made for Seraaj",
     "author": "Jason M",
-    "description": "Keeps track of the number of checkboxes checked. Made for Seraaj",
+    "description": "Keeps track of the number of checkboxes checked",
     "permissions": ["activeTab", "tabs"],
     "content_scripts": [{
       "matches": ["https://hyperiondev.cogrammar.com/dashboard/admin/reviews/outstanding/",
